@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('permiso/{nombre}/{slug?}','PermisoController@index')->name('permiso')->where('nombre','[A-Za-z]+');
