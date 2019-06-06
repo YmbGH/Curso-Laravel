@@ -1,6 +1,6 @@
 @extends("theme.$theme.layout")
 @section('titulo')
-    Sistema Menús
+    Sistema - Menús
 @endsection
 @section('contenido')
 <div class="row">

@@ -16,7 +16,10 @@ class MenuController extends Controller
      */
     public function index()
     {
-        //
+        // $permisos=Permiso::orderBy('id')->get();
+        // return view('admin.permiso.index',compact('permisos'));
+        $menus=Menu::orderBy('id')->get();
+        return view('admin.menu.index',compact('menus'));
     }
 
     /**
