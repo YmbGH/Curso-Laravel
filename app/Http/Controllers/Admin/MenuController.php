@@ -18,7 +18,11 @@ class MenuController extends Controller
     {
         // $permisos=Permiso::orderBy('id')->get();
         // return view('admin.permiso.index',compact('permisos'));
-        $menus=Menu::orderBy('id')->get();
+        
+        $menus=Menu::getMenu();
+        //dd($menus);
+        
+        //$menus=Menu::orderBy('id')->get();
         return view('admin.menu.index',compact('menus'));
     }
 
@@ -88,5 +92,15 @@ class MenuController extends Controller
     public function eliminar($id)
     {
         //
+    }
+    public function guardarOrden(Request $request)
+    {
+        if ($request->ajax()) {
+            $menu = new Menu;
+            $menu->guardarOrden($request->menu);
+            return response()->json(['respuesta' => 'ok']);
+        } else {
+            abort(404);
+        }
     }
 }
