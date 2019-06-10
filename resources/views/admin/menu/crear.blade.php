@@ -15,6 +15,11 @@
         <div class="box box-danger">
             <div class="box-header with-border">
                 <h3 class="box-title">Crear Menús</h3>
+                <div class="box-tool pull-right">
+                    <a href="{{route('menu')}}" class="btn btn-block btn-info btn-sm">
+                        <i class="fa fa-fw fa-reply"></i> Volver al Listado
+                    </a>
+                </div>
             </div>
             <form  action="{{route('guardar_menu')}}" id="form-general" class="form-horizontal" method="POST" autocomplete="off">
                 @csrf

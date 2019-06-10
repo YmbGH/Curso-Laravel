@@ -10,7 +10,6 @@ class Menu extends Model
     protected $fillable = ['nombre','url','icono']; //campos que se pueden crear masivamente, para evitar intrusiones externas
     protected $guarded = ['id']; //laravel no lo deja modificar, para evitar intrusiones externas
 
-
     public function getHijos($padres, $line)
     {
         $children = [];
